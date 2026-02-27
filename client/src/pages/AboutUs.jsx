@@ -98,7 +98,41 @@ const AboutUs = () => {
             </div>
           </div>
 
-         
+          <div className="bg-white p-4 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
+            <img
+              src={Img1}
+              alt="Aj"
+              className="w-24 h-24 mx-auto object-cover rounded-full border-4 border-teal-600 shadow-md mb-3"
+            />
+            <h3 className="text-lg font-bold text-gray-800">
+              Ajay Kumar Singh
+            </h3>
+            <p className="text-sm text-gray-600 mb-2">
+              B.Tech CSE | Frontend Developer
+            </p>
+            <p className="text-gray-700 text-sm mb-3">
+              Designed smooth and clean user interfaces to ensure the best user
+              experience.
+            </p>
+            <div className="text-teal-600 space-x-3 text-lg">
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-teal-800"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-teal-800"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
 
           <div className="bg-white p-4 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
             <img
@@ -134,20 +168,90 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-       
+        <div className="grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 max-w-4xl mx-auto mb-10">
+          <div className="bg-white p-4 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
+            <img
+              src={Img4}
+              alt="Sanjeev Kumar"
+              className="w-24 h-24 mx-auto object-cover rounded-full border-4 border-teal-600 shadow-md mb-3"
+            />
+            <h3 className="text-lg font-bold text-gray-800">Sanjeev Kumar</h3>
+            <p className="text-sm text-gray-600 mb-2">
+              B.Tech EE | Team Leader
+            </p>
+            <p className="text-gray-700 text-sm mb-3">
+              Passionate team leader who motivates and supports the team to
+              achieve goals, solve challenges, and deliver high-quality results
+              through effective communication and collaboration.{" "}
+            </p>
+            <div className="text-teal-600 space-x-3 text-lg">
+              <a
+                href="https://www.linkedin.com/in/amit-kumar-ab24602a4"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-teal-800"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/Amit-kr-563"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-teal-800"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
+            <img
+              src={img5}
+              alt="Aj"
+              className="w-24 h-24 mx-auto object-cover rounded-full border-4 border-teal-600 shadow-md mb-3"
+            />
+            <h3 className="text-lg font-bold text-gray-800">Divyanshu Singh</h3>
+            <p className="text-sm text-gray-600 mb-2">
+              B.Tech CSE | Full Stack Developer
+            </p>
+            <p className="text-gray-700 text-sm mb-3">
+             Passionate about building tech that solves real problems. Lead
+              developer of this project.
+            </p>
+            <div className="text-teal-600 space-x-3 text-lg">
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-teal-800"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-teal-800"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
           <div className="bg-white p-4 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
             <img
               src={Img6}
               alt="Sneha Verma"
               className="w-24 h-24 mx-auto object-cover rounded-full border-4 border-teal-600 shadow-md mb-3"
             />
-            <h3 className="text-lg font-bold text-gray-800">Divyanshu Singh</h3>
+            <h3 className="text-lg font-bold text-gray-800">Sumit Kumar</h3>
             <p className="text-sm text-gray-600 mb-2">
-              B.Tech CSE | Full-Stack Developer
+              B.Tech CSE | Data Analyst
             </p>
             <p className="text-gray-700 text-sm mb-3">
-              Passionate about building tech that solves real problems. Lead
-              developer of this project.{" "}
+              Driven data analyst and team leader who helps the team uncover
+              insights, solve problems, and make data-driven decisions through
+              collaboration, accurate analysis, and effective communication.{" "}
             </p>
             <div className="text-teal-600 space-x-3 text-lg">
               <a
