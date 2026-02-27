@@ -5,7 +5,7 @@ import Img1 from "../assets/profile.jpg";
 import Img2 from "../assets/Img2.jpg";
 import Img3 from "../assets/Img3.jpg";
 import Img4 from "../assets/img4.jpg";
-import Img5 from "../assets/img5.jpg";
+import Img5 from "../assets/img5.png";
 import Img6 from "../assets/img6.jpg";
 
 const AboutUs = () => {
@@ -206,7 +206,7 @@ const AboutUs = () => {
 
           <div className="bg-white p-4 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
             <img
-              src={img5}
+              src={Img5}
               alt="Aj"
               className="w-24 h-24 mx-auto object-cover rounded-full border-4 border-teal-600 shadow-md mb-3"
             />
