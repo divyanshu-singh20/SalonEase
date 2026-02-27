@@ -15,8 +15,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://salonease7.vercel.app",
-      "https://salon-ease-a-pre-booking-salon-git-a8fb35-rajput-aj07s-projects.vercel.app"
+      "https://salon-ease-qyj9.vercel.app",
+     "https://salon-ease-qyj9-76321fpzh-divyanshu-singhs-projects-28ae076b.vercel.app"
     ],
     credentials: true,
   })
