@@ -2,8 +2,7 @@ import React from "react";
 import UserNavbar from "../components/UserNavbar";
 import Footer from "../components/Footer";
 
-import Img2 from "../assets/Img2.jpg";
-import Img3 from "../assets/Img3.jpg";
+
 
 import Img5 from "../assets/img5.png";
 
