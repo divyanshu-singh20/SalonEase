@@ -12,12 +12,24 @@ const paymentRouter = require("./router/paymentRouter");
 dotenv.config();
 const app = express();
 
+const allowedOrigins = [
+  "https://salon-ease-qyj9.vercel.app",
+  "https://salon-ease-qyj9-76321fpzh-divyanshu-singhs-projects-28ae076b.vercel.app",
+  "http://localhost:5173",
+  "http://127.0.0.1:5173",
+  ...(process.env.CORS_ORIGINS
+    ? process.env.CORS_ORIGINS.split(",").map((origin) => origin.trim())
+    : []),
+];
+
 app.use(
   cors({
-    origin: [
-      "https://salon-ease-qyj9.vercel.app",
-     "https://salon-ease-qyj9-76321fpzh-divyanshu-singhs-projects-28ae076b.vercel.app"
-    ],
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   })
 );

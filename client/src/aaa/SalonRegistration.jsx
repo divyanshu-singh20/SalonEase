@@ -4,12 +4,34 @@ import OwnerAuthStep from "./OwnerAuthStep";
 import SalonInfoForm from "./SalonInfoForm";
 import ServicesAndTimingForm from "./ServicesAndTimingForm";
 import BankDetailsForm from "./BankDetailsForm";
-import axios from "axios";
+import { registerShopkeeper } from "../service/api";
 import { useNavigate } from "react-router-dom";
 
 const SalonRegistration = () => {
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    mobile: "",
+    password: "",
+    ownerName: "",
+    email: "",
+    salonName: "",
+    address: "",
+    genderType: "",
+    latitude: "",
+    longitude: "",
+    servicesAndTiming: {
+      services: [{ name: "", price: "", duration: "" }],
+      openingTime: "",
+      closingTime: "",
+      workingDays: [],
+      notes: "",
+    },
+    accountHolder: "",
+    accountNumber: "",
+    ifsc: "",
+    upiId: "",
+    bankName: "",
+  });
   const navigate = useNavigate();
   const handleNext = () => setStep((prev) => prev + 1);
   const handleBack = () => setStep((prev) => prev - 1);
@@ -19,26 +41,19 @@ const SalonRegistration = () => {
       const fullForm = new FormData();
 
       Object.entries(formData).forEach(([key, value]) => {
-        if (Array.isArray(value)) {
+        if (value === undefined || value === null) return;
+        if (key === "servicesAndTiming" || Array.isArray(value)) {
           fullForm.append(key, JSON.stringify(value));
         } else {
           fullForm.append(key, value);
         }
       });
 
-      const response = await axios.post(
-        "https://salonease-a-pre-booking-salon-system.onrender.com/api/register/shop",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      await registerShopkeeper(fullForm);
       navigate("/login");
       alert(" Registration Successful!");
     } catch (err) {
-      alert(" Registration Failed.", err.message);
+      alert(err?.response?.data?.message || "Registration Failed.");
       console.error(err);
     }
   };

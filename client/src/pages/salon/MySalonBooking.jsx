@@ -4,6 +4,7 @@ import axios from "axios";
 const MySalonBookings = () => {
   const [bookings, setBookings] = useState([]);
   const [tab, setTab] = useState("upcoming");
+  const apiRoot = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
 
   useEffect(() => {
     const storedSalonId = localStorage.getItem("salonId");
@@ -13,7 +14,7 @@ const MySalonBookings = () => {
   const fetchBookings = async (salonId) => {
     try {
       const res = await axios.get(
-        `https://salonease-a-pre-booking-salon-system.onrender.com/bookings/salon/${salonId}`
+        `${apiRoot}/api/bookings/salon/${salonId}`
       );
       setBookings(res.data);
     } catch (error) {
@@ -23,7 +24,7 @@ const MySalonBookings = () => {
 
   const handleCancel = async (bookingId) => {
     try {
-      await axios.put(`https://salonease-a-pre-booking-salon-system.onrender.com/api/bookings/${bookingId}/cancel`);
+      await axios.put(`${apiRoot}/api/bookings/${bookingId}/cancel`);
       const storedSalonId = localStorage.getItem("salonId");
       if (storedSalonId) fetchBookings(storedSalonId);
     } catch (error) {

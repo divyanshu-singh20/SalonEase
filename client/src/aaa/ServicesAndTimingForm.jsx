@@ -80,7 +80,6 @@ const ServicesAndTimingForm = ({ formData, setFormData, onNext, onBack }) => {
     };
 
     setFormData(updatedData);
-    console.log(" All Form Data So Far:", updatedData);
 
     onNext();
   };

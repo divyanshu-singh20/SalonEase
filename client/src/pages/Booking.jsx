@@ -19,6 +19,7 @@ const Booking = () => {
   const [startTime, setStartTime] = useState("");
   const [bookingDate, setBookingDate] = useState("");
   const [bookedSlots, setBookedSlots] = useState([]);
+  const assetRoot = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
 
   useEffect(() => {
     if (salon?.servicesAndTiming?.services) {
@@ -211,11 +212,11 @@ const Booking = () => {
                 .filter(Boolean)
                 .map((photo, idx) => (
                   <div key={idx}>
-                   <img
-  src={`${import.meta.env.VITE_API_URL}/uploads/${photo}`}
-  alt={`Salon Photo ${idx + 1}`}
-  className="w-full h-72 object-cover rounded-lg"
-/>
+                  <img
+                    src={`${assetRoot}/uploads/${photo}`}
+                    alt={`Salon Photo ${idx + 1}`}
+                    className="w-full h-72 object-cover rounded-lg"
+                  />
 
                   </div>
                 ))}

@@ -5,6 +5,7 @@ import Navbar from "../../components/UserNavbar";
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);
   const [tab, setTab] = useState("upcoming");
+  const apiRoot = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
 
   useEffect(() => {
     const storedUserId = localStorage.getItem("userId");
@@ -13,9 +14,7 @@ const MyBookings = () => {
 
   const fetchBookings = async (userId) => {
     try {
-      const res = await axios.get(
-        `https://salonease-a-pre-booking-salon-system.onrender.com/api/bookings/user/${userId}`
-      );
+      const res = await axios.get(`${apiRoot}/api/bookings/user/${userId}`);
       setBookings(res.data);
     } catch (error) {
       console.error("Failed to fetch bookings", error);
@@ -24,7 +23,7 @@ const MyBookings = () => {
 
   const handleCancel = async (bookingId) => {
     try {
-      await axios.put(`https://salonease-a-pre-booking-salon-system.onrender.com/api/bookings/${bookingId}/cancel`);
+      await axios.put(`${apiRoot}/api/bookings/${bookingId}/cancel`);
       const storedUserId = localStorage.getItem("userId");
       if (storedUserId) fetchBookings(storedUserId);
     } catch (error) {
@@ -36,7 +35,7 @@ const MyBookings = () => {
     try {
       const userId = localStorage.getItem("userId");
       await axios.post(
-        `https://salonease-a-pre-booking-salon-system.onrender.com/api/bookings/${bookingId}/review`,
+        `${apiRoot}/api/bookings/${bookingId}/review`,
         { userId, rating, comment }
       );
       alert("Review submitted!");

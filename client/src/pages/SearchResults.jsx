@@ -10,6 +10,7 @@ const SearchResults = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState("Rating");
+  const assetRoot = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
 
   const searchParams = location.state || {};
 
@@ -83,7 +84,7 @@ const SearchResults = () => {
                 className="flex-shrink-0 w-64 bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg"
               >
                 <img
-                  src={`https://salonease-a-pre-booking-salon-system.onrender.com/uploads/${salon.shopFrontPhoto}`}
+                  src={`${assetRoot}/uploads/${salon.shopFrontPhoto}`}
                   alt={salon.salonName}
                   className="w-full h-40 object-cover"
                 />

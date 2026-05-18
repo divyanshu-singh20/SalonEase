@@ -63,40 +63,7 @@ const AboutUs = () => {
         <h2 className="text-2xl font-bold text-center text-teal-600 mb-8">
           Meet the Team
         </h2>
-        <div className="grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 max-w-4xl mx-auto mb-10">
-          <div className="bg-white p-4 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
-            <img
-              src={Img2}
-              alt="Amit Kumar"
-              className="w-24 h-24 mx-auto object-cover rounded-full border-4 border-teal-600 shadow-md mb-3"
-            />
-            <h3 className="text-lg font-bold text-gray-800">Amit Kumar</h3>
-            <p className="text-sm text-gray-600 mb-2">
-              B.Tech CSE | Full Stack Developer
-            </p>
-            <p className="text-gray-700 text-sm mb-3">
-              Passionate about building tech that solves real problems. Lead
-              developer of this project.
-            </p>
-            <div className="text-teal-600 space-x-3 text-lg">
-              <a
-                href="https://www.linkedin.com/in/amit-kumar-ab24602a4"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-teal-800"
-              >
-                LinkedIn
-              </a>
-              <a
-                href="https://github.com/Amit-kr-563"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-teal-800"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
+        
           
 
 
@@ -137,40 +104,6 @@ const AboutUs = () => {
 
          
 
-          <div className="bg-white p-4 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
-            <img
-              src={Img3}
-              alt="Sneha Verma"
-              className="w-24 h-24 mx-auto object-cover rounded-full border-4 border-teal-600 shadow-md mb-3"
-            />
-            <h3 className="text-lg font-bold text-gray-800">Ujjwal Kumar</h3>
-            <p className="text-sm text-gray-600 mb-2">
-              B.Tech CSE | Backend Developer
-            </p>
-            <p className="text-gray-700 text-sm mb-3">
-              Worked on secure APIs and database design to power the booking
-              engine.
-            </p>
-            <div className="text-teal-600 space-x-3 text-lg">
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-teal-800"
-              >
-                LinkedIn
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-teal-800"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
-        </div>
         
 
           
@@ -179,11 +112,11 @@ const AboutUs = () => {
         <div className="text-center bg-white p-6 rounded-xl shadow-md border-t border-gray-200 max-w-4xl mx-auto mb-8">
           <h2 className="text-xl font-bold text-teal-600 mb-4">Contact Us</h2>
           <p className="text-gray-700 mb-2">
-            📞 Phone: <span className="font-medium">+91-9523599608</span>
+            📞 Phone: <span className="font-medium">+91-6203598912</span>
           </p>
           <p className="text-gray-700">
             📧 Email:{" "}
-            <span className="font-medium">kumaramitbxr2004@gmail.com</span>
+            <span className="font-medium">divyanshusingh83088@gmail.com</span>
           </p>
         </div>
 

@@ -8,4 +8,18 @@ export default defineConfig({
   plugins: [react(),
      tailwindcss()
   ],
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://salonease-1.onrender.com",
+        changeOrigin: true,
+        secure: true,
+      },
+      "/uploads": {
+        target: "https://salonease-1.onrender.com",
+        changeOrigin: true,
+        secure: true,
+      },
+    },
+  },
 })

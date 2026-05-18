@@ -23,7 +23,6 @@ const BankDetailsForm = ({ formData, setFormData, onBack, onNext }) => {
       bankName,
       passbookPhoto,
     } = formData;
-    console.log(" All Form Data So Far:", formData);
     if (
       !accountHolder ||
       !accountNumber ||
