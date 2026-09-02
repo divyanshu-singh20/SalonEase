@@ -14,7 +14,8 @@ const app = express();
 
 const allowedOrigins = [
   "https://salon-ease-qyj9.vercel.app",
-  "https://salon-ease-qyj9-76321fpzh-divyanshu-singhs-projects-28ae076b.vercel.app",
+  
+  "https://salon-ease-qyj9-3ch6ctynt-divyanshu-singhs-projects-28ae076b.vercel.app",
   "http://localhost:5173",
   "http://127.0.0.1:5173",
   ...(process.env.CORS_ORIGINS
