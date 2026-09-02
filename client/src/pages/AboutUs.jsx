@@ -126,8 +126,12 @@ const AboutUs = () => {
           <p className="text-gray-600 mt-2">
             Join us and experience salon booking like never before.
           </p>
+          <h1 className="text-3xl font-bold text-center text-teal-600 mb-6">
+  About Our Salon Booking Platform
+</h1>
         </div>
       </main>
+
       <Footer />
     </>
   );
