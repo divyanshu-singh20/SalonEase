@@ -82,10 +82,8 @@ const staticAllowedOrigins = [
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow non-browser requests (Postman, mobile, curl)
       if (!origin) return callback(null, true);
 
-      // Allow static origins OR any dynamic Vercel deployment URL (*.vercel.app)
       if (staticAllowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
         return callback(null, true);
       }
@@ -98,8 +96,8 @@ app.use(
   })
 );
 
-// Handle preflight requests
-app.options("*", cors());
+// Express automatically handles preflight requests via app.use(cors()) 
+// DO NOT use app.options("*", cors())
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
